@@ -15,15 +15,12 @@ import com.example.fragmentguide0.databinding.FragmentQuestionBinding;
 
 
 public class QuestionFragment extends Fragment {
-    private FragmentQuestionBinding mBinding;
 
+    private FragmentQuestionBinding mBinding;
 
     public QuestionFragment() {
         // Required empty public constructor
     }
-
-
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -42,7 +39,7 @@ public class QuestionFragment extends Fragment {
     @Override
 
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState){
-        super.onViewCreated(   view, savedInstanceState);
+        super.onViewCreated(view, savedInstanceState);
         mBinding.radiogroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
@@ -61,8 +58,11 @@ public class QuestionFragment extends Fragment {
                     default:
                         break;
                 }
+
             }
+
         });
 
     }
+
 }
